@@ -10,7 +10,7 @@ import androidx.navigation.compose.rememberNavController
 @Composable
 fun NavGraph() {
 
- val navController = rememberNavController()
+    val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "Screen A") {
 
         composable(route = "Screen A") {
@@ -19,7 +19,7 @@ fun NavGraph() {
         composable(route = "Screen B") {
             ScreenB(navController)
         }
-        composable(route = "Screen B") {
+        composable(route = "Screen C") {
             ScreenC(navController)
         }
     }

@@ -24,8 +24,13 @@ fun ScreenC(navController: NavController) {
     ) {
        Text(text = "Screen C", fontSize = 34.sp)
         Spacer(modifier = Modifier.height(65.dp))
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = {
+            navController.navigate("Screen A") {
+                popUpTo("Screen A") {inclusive = true}
+            }
+        }) {
             Text(text = "Go to Screen A", fontSize = 40.sp )
         }
+
 }
 }
